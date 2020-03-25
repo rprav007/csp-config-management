@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: "gcr.io/openshift-sa-gcp/nginx:latest"
+    ports:
+    - containerPort: 80
