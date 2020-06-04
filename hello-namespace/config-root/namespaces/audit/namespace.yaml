@@ -1,5 +1,0 @@
-# creates namespace named "binauth"
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: audit
