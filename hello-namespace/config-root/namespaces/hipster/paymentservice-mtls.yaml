@@ -1,0 +1,20 @@
+apiVersion: "networking.istio.io/v1beta1"
+kind: "DestinationRule"
+metadata:
+  name: "paymentservice-disable-mtls"
+spec:
+  host: paymentservice
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: paymentservice-disabled
+spec:
+  selector:
+    matchLabels:
+      app: paymentservice
+  mtls:
+    mode: DISABLE
