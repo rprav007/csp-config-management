@@ -1,7 +1,7 @@
-apiVersion: "networking.istio.io/v1beta1"
-kind: "DestinationRule"
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
 metadata:
-  name: "paymentservice-disable-mtls"
+  name: paymentservice-disable-mtls
   annotations:
     configmanagement.gke.io/cluster-selector: asm-enabled
 spec:
