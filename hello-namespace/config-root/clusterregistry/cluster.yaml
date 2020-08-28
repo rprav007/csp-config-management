@@ -3,4 +3,4 @@ apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
   name: anthos-gke
   labels:
-    asm: true
+    asm: enabled
