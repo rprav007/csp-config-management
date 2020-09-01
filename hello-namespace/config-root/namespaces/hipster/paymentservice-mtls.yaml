@@ -2,6 +2,7 @@ apiVersion: "networking.istio.io/v1beta1"
 kind: "DestinationRule"
 metadata:
   name: "paymentservice-disable-mtls"
+  namespace: hipster
   annotations:
     configmanagement.gke.io/cluster-selector: asm-enabled
 spec:
@@ -14,6 +15,7 @@ apiVersion: security.istio.io/v1beta1
 kind: PeerAuthentication
 metadata:
   name: paymentservice-disabled
+  namespace: hipster
   annotations:
     configmanagement.gke.io/cluster-selector: asm-enabled
 spec:
