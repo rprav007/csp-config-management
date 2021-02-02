@@ -8,7 +8,7 @@ spec:
   host: paymentservice
   trafficPolicy:
     tls:
-      mode: DISABLE
+      mode: STRICT
 ---
 apiVersion: security.istio.io/v1beta1
 kind: PeerAuthentication
@@ -21,4 +21,4 @@ spec:
     matchLabels:
       app: paymentservice
   mtls:
-    mode: DISABLE
+    mode: STRICT
